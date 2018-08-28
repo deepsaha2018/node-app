@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh development@192.168.1.54 <<EOF
+ cd ~/node-app
+ git pull
+ npm install
+ pm2 restart all
+ exit
+EOF
